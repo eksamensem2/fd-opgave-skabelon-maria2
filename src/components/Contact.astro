@@ -1,49 +1,73 @@
-<section class="grid_2">
-  <div>
-    <h2>Contact Us. It's Easy,</h2>
-    <p>
-      Leverage agile frameworks to provide a robust synopsis for high level
-      overviews. Iterative approaches to corporate strategy foster
-      collaborative.
-    </p>
-
-    <img src="../icons/phone.svg" alt="" />
-    <p>Call yoday</p>
-    <p>+1 800 100 900</p>
-
-    <img src="../icons/pin.svg" alt="" />
-    <p>Monday To Friday</p>
-    <p class="fontweight">9AM - 5PM</p>
-
-    <img src="../icons/clock.svg" alt="" />
-    <p>USA Office</p>
-    <p>195 Devonshire St Boston, MA 02110</p>
-  </div>
-
-  <div class="collage">
-    <img class="box-1" src="../../public/images/griddame.jpg" alt="" />
+<section>
+  <div class="grid_2">
     <div>
-      <img src="../../public/images/gridtodamer.jpg" alt="" />
-      <img src="../../public/images/gridhander.jpg" alt="" />
+      <h2>Contact Us. It's Easy,</h2>
+      <p>
+        Leverage agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster
+        collaborative.
+      </p>
+
+      <ul>
+        <li>
+          <img src="../../public/images/yellowphone.svg" alt="" />
+          <div>
+            <p>Call yoday</p>
+            <p>+1 800 100 900</p>
+          </div>
+        </li>
+
+        <li>
+          <img src="../../public/images/greenclock.svg" alt="" />
+          <div>
+            <p>Monday To Friday</p>
+            <p class="fontweight">9AM - 5PM</p>
+          </div>
+        </li>
+        <li>
+          <img src="../../public/images/greypin.svg" alt="" />
+          <div>
+            <p>USA Office</p>
+            <p>195 Devonshire St Boston, MA 02110</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collage">
+      <img class="box-1" src="../../public/images/griddame.jpg" alt="" />
+      <div>
+        <img src="../../public/images/gridtodamer.jpg" alt="" />
+        <img src="../../public/images/gridhander.jpg" alt="" />
+      </div>
     </div>
   </div>
-</section>
 
-<style>
-  section {
-    .grid_2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+  <style>
+    section {
+      padding-block: 4rem;
+      .grid_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: block;
+      }
+
+      ul {
+        padding-left: 0;
+
+        li {
+          display: flex;
+          gap: 20px;
+        }
+      }
+      .collage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      img {
+        border-radius: 20px;
+      }
     }
-    .collage {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    img {
-      border-radius: 20px;
-      margin: 1rem;
-    }
-  }
-</style>
+  </style>
+</section>

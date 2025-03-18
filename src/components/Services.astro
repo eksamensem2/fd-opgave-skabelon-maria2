@@ -21,16 +21,20 @@ const servicesData = await fetch(
 
 <style>
   @layer components {
+    div {
+      padding-block: 4rem;
+    }
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       list-style: none;
       justify-content: center;
       gap: 10px;
+      padding-left: 0;
     }
     li {
       padding: 46px;
-      flex: 1 0 0;
+      /* flex: 1 0 0; */
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.2);
 

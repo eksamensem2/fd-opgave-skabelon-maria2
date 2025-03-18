@@ -7,3 +7,30 @@
     --secondary01-color:#F5F5F5;
     --secondary02-color:#FFFFFF;
 }
+
+p{
+    line-height: 147.5%;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h2{
+    font-family: Cabin;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 116%;
+}
+.bg {
+    background-color: var(--primary01-color);
+    letter-spacing: 2.32px;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    padding: 0px 12px;
+    display: flex;
+    width: 270px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  

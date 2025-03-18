@@ -1,0 +1,25 @@
+---
+//@ts-nocheck
+const coreValue = await fetch(
+  "https://frontend-design-theme.netlify.app/api/coreValues"
+).then((response) => response.json());
+---
+
+<section>
+  <h2>{coreValue.title}</h2>
+  <p>{coreValue.subtitle}</p>
+  <button>{coreValue.button.text}</button>
+  <div>
+    <ul>
+      {
+        coreValue.values.map((value) => (
+          <li key={value.title}>
+            <h3>{value.title}</h3>
+            <p>{value.description}</p>
+            <button>{value.}</button>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
