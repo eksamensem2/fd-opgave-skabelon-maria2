@@ -3,11 +3,6 @@
 const financialProjections = await fetch(
   "https://frontend-design-theme.netlify.app/api/financialProjections"
 ).then((response) => response.json());
-
-console.log(financialProjections);
-
-import ArrowRight from "../icons/arrow--right.svg";
-import ArrowLeft from "../icons/arrow-left.svg";
 ---
 
 <section class="main">
@@ -18,11 +13,6 @@ import ArrowLeft from "../icons/arrow-left.svg";
         <p>
           {financialProjections.subtitle}
         </p>
-      </div>
-
-      <div class="svg">
-        <button class="right"><ArrowRight /></button>
-        <button class="left"><ArrowLeft /></button>
       </div>
     </div>
 
@@ -76,9 +66,18 @@ import ArrowLeft from "../icons/arrow-left.svg";
         grid-column: full;
         padding-inline: max(1rem, 50% - var(--content-width) / 2);
         padding-block-end: 1rem;
+        /* hvordan får jeg den helt ud, muligvis dette??  */
+        width: 100vw;
+        grid-column: 1 / -1;
 
         li {
           scroll-snap-align: center;
+          &:hover {
+            color: var(--secondary01-color);
+            background-color: var(--primary03-color);
+            border: 0.5px solid var(--primary03-color);
+            cursor: pointer;
+          }
         }
       }
     }
