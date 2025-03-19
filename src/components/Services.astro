@@ -21,9 +21,6 @@ const servicesData = await fetch(
 
 <style>
   @layer components {
-    div {
-      padding-block: 4rem;
-    }
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -44,6 +41,7 @@ const servicesData = await fetch(
 
       h2 {
         color: #fff;
+        font-size: 25px;
       }
 
       p {
@@ -52,8 +50,6 @@ const servicesData = await fetch(
 
       a {
         color: #fff;
-        font-family: Lato;
-        /* font-size: 18px; */
         font-style: normal;
         font-weight: 600;
         line-height: 160%;
@@ -61,6 +57,10 @@ const servicesData = await fetch(
         border-radius: 20px;
         padding: 16px 31px;
         text-decoration: none;
+      }
+
+      > * {
+        padding: 1rem;
       }
     }
   }

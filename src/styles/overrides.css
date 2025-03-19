@@ -1,1 +1,10 @@
 /* Override styles here */
+
+:root {
+    --none: transparent;
+    --black: #181818;
+    --gray: #eee;
+    --white: #fff;
+  }
+
+  

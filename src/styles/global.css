@@ -8,26 +8,53 @@
     --secondary02-color:#FFFFFF;
 
     --paragraph-lineheight: 1.475rem;
-    --heading-padding-block: 1rem
-}
+    --heading-padding-block: 1rem;
+
+    --heading-01-fontsize: xx-large;
+    --heading-02-fontsize: x-large;
+    --heading-03-fontsize: large;
+    --heading-04-fontsize: medium;
+    --heading-05-fontsize: small;
+
+  }
 
 h1,
 h2,
 h3 {
   font-family: "Cabin", sans-serif;
   padding-block: var(--heading-padding-block);
+ font-weight: 700;
 }
 
-h4,
+h1{
+  font-size: 50px;
+
+}
+h2{
+  font-size: 45px;
+
+}
+
+/* h4,
 h5,
 h6 {
   font-family: "Lato", sans-serif;
   padding-block: var(--heading-padding-block);
-}
+} */
 
 p {
   font-family: "Lato", sans-serif;
   line-height: var(--paragraph-lineheight);
+  font-weight: 400;
+}
+button,
+a{
+  font-family: "Cabin", sans-serif;
+}
+
+img{
+  border-radius: 20px;
+
 }
 
 
@@ -51,7 +78,7 @@ h2{
     border-radius: 2rem;
     padding: 0px 12px;
     display: flex;
-    width: 270px;
+    width: fit-content;
     align-items: flex-start;
     gap: 10px;
   }

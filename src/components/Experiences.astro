@@ -33,10 +33,10 @@ const Experiences = await fetch(
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    .text {
+    /* .text {
       align-items: flex-start;
       padding-right: 80px;
-    }
+    } */
 
     .bg {
       background-color: var(--secondary02-color);
@@ -53,7 +53,7 @@ const Experiences = await fetch(
       font-style: normal;
       font-weight: 400;
       line-height: 147.5%;
-      padding-right: 0;
+      /* padding-right: 0; */
     }
 
     .stats {
@@ -88,14 +88,16 @@ const Experiences = await fetch(
       display: grid;
       counter-reset: count var(--percent);
 
-      /* &::before,
+      &::before,
       &::after {
         grid-area: 1 / -1;
-      } */
+      }
 
       &::after {
         content: counter(count) "%";
         place-self: center;
+        font-size: 40px;
+        font-weight: 700;
       }
 
       &::before {

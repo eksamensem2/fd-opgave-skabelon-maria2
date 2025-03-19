@@ -1,6 +1,8 @@
 <section>
   <div class="grid_2">
     <div>
+      <p class="bg">Contact</p>
+
       <h2>Contact Us. It's Easy,</h2>
       <p>
         Leverage agile frameworks to provide a robust synopsis for high level
@@ -34,40 +36,45 @@
       </ul>
     </div>
 
-    <div class="collage">
-      <img class="box-1" src="../../public/images/griddame.jpg" alt="" />
-      <div>
-        <img src="../../public/images/gridtodamer.jpg" alt="" />
-        <img src="../../public/images/gridhander.jpg" alt="" />
-      </div>
+    <div class="container">
+      <img class="box box-1" src="../../public/images/griddame.jpg" alt="" />
+      <img class="box box-2" src="../../public/images/gridtodamer.jpg" alt="" />
+      <img class="box box-3" src="../../public/images/gridhander.jpg" alt="" />
     </div>
   </div>
+</section>
 
-  <style>
-    section {
-      padding-block: 4rem;
-      .grid_2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: block;
-      }
+<style>
+  section {
+    .grid_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: block;
+    }
 
-      ul {
-        padding-left: 0;
+    ul {
+      padding-left: 0;
 
-        li {
-          display: flex;
-          gap: 20px;
-        }
-      }
-      .collage {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-      img {
-        border-radius: 20px;
+      li {
+        display: flex;
+        gap: 20px;
       }
     }
-  </style>
-</section>
+    .container {
+      display: grid;
+      gap: 10px;
+      grid-template-areas:
+        "a b"
+        "a c";
+    }
+    .box-1 {
+      grid-area: a;
+    }
+    .box-2 {
+      grid-area: b;
+    }
+    .box-3 {
+      grid-area: c;
+    }
+  }
+</style>

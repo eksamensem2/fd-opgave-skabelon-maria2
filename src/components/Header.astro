@@ -7,47 +7,91 @@
       <a href="Team">Team</a>
       <a href="About">About</a>
     </div>
-    <button>Login</button>
+
+    <button popovertarget="popup">Login</button>
+    <div popover id="popup">
+      <h2>Dashboard Login</h2>
+      <div class="input">
+        <p>E-mail</p>
+        <input id="E-mail" name="Email" type="email" />
+        <p>Password</p>
+        <input id="Password" name="Password" type="password" />
+      </div>
+      <button class="popupbutton">Go To Dashboard</button>
+    </div>
   </div>
-</header>
 
-<style>
-  @layer components {
-    header {
-      background: rgba(27, 27, 27, 0.91);
-      backdrop-filter: blur(10.5px);
-    }
-    .inner {
-      display: flex;
-      /* width: auto; */
-      padding-block: 38px;
-      justify-content: space-between;
-      align-items: flex-start;
-      h2 {
-        color: #fff;
-      }
-      a {
-        color: #fff;
-        list-style: none;
-        text-decoration: none;
-      }
-
+  <style>
+    @layer components {
       button {
-        display: flex;
+        /* display: flex; */
         padding: 4px 16px;
-        justify-content: center;
+        /* justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 10px; */
         border-radius: 20px;
         background: #ffcc4a;
       }
-
-      .links {
-        display: flex;
-        justify-content: center;
+      .popupbutton {
+        /* display: flex; */
+        padding: 15px 56px;
+        color: var(--primary03-color);
+        /* justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 10px; */
+        border-radius: 42px;
+        background: #ffcc4a;
+      }
+      ::backdrop {
+        background: red;
+        backdrop-filter: blur(8px);
+      }
+      #popup {
+        padding: 40px 60px 60px 60px;
+        background: var(--primary03-color);
+        color: var(--secondary01-color);
+
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      input {
+        background-color: var(--secondary02-color);
+        height: auto;
+        font-size: 18px;
+
+        p {
+          font-size: 18px;
+          margin-top: 1rem;
+        }
+      }
+
+      header {
+        background: rgba(27, 27, 27, 0.91);
+        /* backdrop-filter: blur(10.5px); */
+      }
+      .inner {
+        display: flex;
+        padding-block: 38px;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+        align-items: center;
+        h2 {
+          color: #fff;
+          font-size: 30px;
+        }
+        a {
+          color: #fff;
+          list-style: none;
+          text-decoration: none;
+        }
+
+        .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+        }
       }
     }
-  }
-</style>
+  </style>
+</header>
