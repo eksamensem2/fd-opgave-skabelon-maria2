@@ -1,0 +1,49 @@
+---
+import Buttons from "./Buttons.astro";
+---
+
+<section>
+  <div class="grid_3">
+    <div>
+      <h2>Subscribe Our Newsletter</h2>
+      <p>Build stronger Customer Relationships with Consultalk</p>
+    </div>
+    <input
+      id="E-mail"
+      name="Email"
+      placeholder="your mail address"
+      type="email"
+    />
+
+    <Buttons variant="secondary" size="large">Subscribe</Buttons>
+  </div>
+</section>
+
+<style>
+  .grid_3 {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    background-color: var(--primary03-color);
+    padding: 30px 20px;
+    border-radius: 14px;
+
+    h2 {
+      font-size: 35px;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      font-size: 16px;
+    }
+    input {
+      border-radius: 54px;
+      border: 1px solid #e3e3e3;
+      background: #fff;
+      padding: 22px 155px 22px 33px;
+    }
+    button {
+      padding: 15px 45px;
+    }
+  }
+</style>

@@ -3,14 +3,19 @@
 const coreValue = await fetch(
   "https://frontend-design-theme.netlify.app/api/coreValues"
 ).then((response) => response.json());
+
+import Buttons from "./Buttons.astro";
 ---
 
 <section>
-  <div class="text">
-    <h2>{coreValue.title}</h2>
-    <p>{coreValue.subtitle}</p>
+  <div class="grid_2">
+    <div class="text">
+      <p class="bg">growing with our clients</p>
+      <h2>{coreValue.title}</h2>
+      <p>{coreValue.subtitle}</p>
+    </div>
+    <Buttons variant="tertiary" size="large">{coreValue.button.text}</Buttons>
   </div>
-  <button>{coreValue.button.text}</button>
   <div>
     <ul>
       {
@@ -30,6 +35,19 @@ const coreValue = await fetch(
   section {
     background-color: var(--primary03-color);
     color: var(--secondary02-color);
+    .bg {
+      color: var(--primary03-color);
+    }
+
+    .grid_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 150px;
+      button {
+        height: fit-content;
+        padding: 15px 34px;
+      }
+    }
 
     ul {
       display: grid;

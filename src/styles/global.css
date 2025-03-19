@@ -35,12 +35,6 @@ h2{
 
 }
 
-/* h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-  padding-block: var(--heading-padding-block);
-} */
 
 p {
   font-family: "Lato", sans-serif;
@@ -56,21 +50,6 @@ img{
   border-radius: 20px;
 
 }
-
-
-/* p{
-    line-height: 147.5%;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-h2{
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 116%;
-} */
 .bg {
     background-color: var(--primary01-color);
     letter-spacing: 2.32px;
