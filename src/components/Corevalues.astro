@@ -6,20 +6,53 @@ const coreValue = await fetch(
 ---
 
 <section>
-  <h2>{coreValue.title}</h2>
-  <p>{coreValue.subtitle}</p>
+  <div class="text">
+    <h2>{coreValue.title}</h2>
+    <p>{coreValue.subtitle}</p>
+  </div>
   <button>{coreValue.button.text}</button>
   <div>
     <ul>
       {
         coreValue.values.map((value) => (
-          <li key={value.title}>
+          <li>
             <h3>{value.title}</h3>
             <p>{value.description}</p>
-            <button>{value.}</button>
+            <button>{value.link.text}</button>
           </li>
         ))
       }
     </ul>
   </div>
 </section>
+
+<style>
+  section {
+    background-color: var(--primary03-color);
+    color: var(--secondary02-color);
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      list-style: none;
+      justify-content: center;
+      gap: 10px;
+      padding-left: 0;
+      li {
+        background-color: var(--secondary02-color);
+        color: var(--primary03-color);
+        padding: 36px 23px;
+        border-radius: 20px;
+      }
+    }
+  }
+  .text {
+    align-items: flex-end;
+    gap: 20px;
+    width: 645px;
+  }
+
+  button {
+    display: left;
+  }
+</style>

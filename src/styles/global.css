@@ -6,9 +6,32 @@
     --primary03-color:#181818;
     --secondary01-color:#F5F5F5;
     --secondary02-color:#FFFFFF;
+
+    --paragraph-lineheight: 1.475rem;
+    --heading-padding-block: 1rem
 }
 
-p{
+h1,
+h2,
+h3 {
+  font-family: "Cabin", sans-serif;
+  padding-block: var(--heading-padding-block);
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  padding-block: var(--heading-padding-block);
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  line-height: var(--paragraph-lineheight);
+}
+
+
+/* p{
     line-height: 147.5%;
     font-family: Lato;
     font-size: 16px;
@@ -16,12 +39,11 @@ p{
 }
 
 h2{
-    font-family: Cabin;
         font-size: 25px;
         font-style: normal;
         font-weight: 600;
         line-height: 116%;
-}
+} */
 .bg {
     background-color: var(--primary01-color);
     letter-spacing: 2.32px;
@@ -33,4 +55,3 @@ h2{
     align-items: flex-start;
     gap: 10px;
   }
-  
