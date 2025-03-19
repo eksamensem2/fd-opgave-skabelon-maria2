@@ -3,6 +3,8 @@
 const servicesData = await fetch(
   "https://frontend-design-theme.netlify.app/api/services"
 ).then((response) => response.json());
+
+import Buttons from "./Buttons.astro";
 ---
 
 <div>
@@ -12,7 +14,8 @@ const servicesData = await fetch(
         <li>
           <h2>{service.title}</h2>
           <p>{service.description}</p>
-          <a href="#0">{service.buttonText}</a>
+          <Buttons size="large">{service.buttonText}</Buttons>
+          {/* <button href="#0">{service.buttonText}</button> */}
         </li>
       ))
     }
@@ -48,7 +51,7 @@ const servicesData = await fetch(
         color: #fff;
       }
 
-      a {
+      button {
         color: #fff;
         font-style: normal;
         font-weight: 600;

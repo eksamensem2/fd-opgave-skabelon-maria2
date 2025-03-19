@@ -6,5 +6,38 @@ const { variant, size, action } = Astro.props;
 
 <style>
   button {
+    cursor: pointer;
+    color: var(--secondary01-color);
+    background-color: var(--primary03-color);
+    border-radius: 42px;
+    /* font-weight: 600; */
+    gap: 10px;
+    transition: linear 0.1s;
+
+    &:hover {
+      color: var(--primary03-color);
+      background-color: var(--secondary01-color);
+      border: 0.5px solid var(--primary03-color);
+    }
+  }
+
+  [data-variant="secondary"] {
+    background-color: var(--primary01-color);
+    color: var(--primary03-color);
+    &:hover {
+      color: var(--primary01-color);
+      background-color: var(--primary03-color);
+      border: 0.5px solid var(--secondary01-color);
+    }
+  }
+
+  [data-variant="tertiary"] {
+    background-color: var(--secondary02-color);
+    color: var(--primary03-color);
+    &:hover {
+      color: var(--secondary02-color);
+      background-color: var(--primary03-color);
+      border: 0.5px solid var(--secondary01-color);
+    }
   }
 </style>
