@@ -1,0 +1,10 @@
+---
+const { variant, size, action } = Astro.props;
+---
+
+<button data-size={size} data-variant={variant}><slot /></button>
+
+<style>
+  button {
+  }
+</style>
