@@ -1,0 +1,45 @@
+---
+//@ts-nocheck
+export async function getStaticPaths() {
+  const employeesData = await fetch(
+    "https://frontend-design-theme.netlify.app/api/employees"
+  ).then((res) => res.json());
+
+  return employeesData.map((employee) => ({
+    params: { employee: employee.slug },
+    props: { employee }, // send al data med som props
+  }));
+}
+const { employee } = Astro.props;
+
+import Layout from "../../layouts/Layout.astro";
+import Subscribe from "../../components/Subscribe.astro";
+---
+
+<Layout>
+  <div class="grid_2">
+    <img src={employee.img} alt={employee.title} />
+    <div>
+      <h2>{employee.name}</h2>
+      <p class="font">{employee.title}</p>
+      <p>{employee.description_long}</p>
+      <hr />
+      <h2>Past experience</h2>
+      <p>{employee.past_experience}</p>
+    </div>
+  </div>
+
+  <Subscribe />
+</Layout>
+
+<style>
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 89px;
+  }
+  .font {
+    font-size: 20px;
+    line-height: 116%;
+  }
+</style>

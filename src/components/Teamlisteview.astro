@@ -1,0 +1,33 @@
+---
+import Buttons from "../components/Buttons.astro";
+import Listecard from "../components/Listecard.astro";
+---
+
+<section>
+  <div class="grid_2">
+    <div>
+      <h2>Meet Our Great Team</h2>
+      <p>
+        Welcome to our amazing team! We are a group of passionate individuals
+        dedicated to excellence and innovation. Each member brings unique skills
+        and experiences, working together to achieve our goals. Join us as we
+        embark on exciting projects and create lasting impacts.
+      </p>
+    </div>
+    <Buttons size="large"> Join our Team </Buttons>
+  </div>
+  <div>
+    <Listecard />
+  </div>
+</section>
+
+<style>
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    button {
+      width: fit-content;
+    }
+  }
+</style>

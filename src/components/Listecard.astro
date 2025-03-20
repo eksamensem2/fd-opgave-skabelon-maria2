@@ -1,0 +1,45 @@
+---
+//@ts-nocheck
+const employeesData = await fetch(
+  "https://frontend-design-theme.netlify.app/api/employees"
+).then((response) => response.json());
+
+console.log(employeesData);
+---
+
+<section>
+  <ul>
+    {
+      employeesData.map((employee) => (
+        <li>
+          <figure>
+            <a href={`/team/${employee.slug}`}>
+              {" "}
+              <img src={employee.img} alt={employee.title} />
+            </a>
+          </figure>
+          <p class="bg">{employee.title}</p>
+          <h3>{employee.name}</h3>
+          <p>{employee.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 51px;
+    list-style: none;
+
+    li {
+      text-align: center;
+    }
+
+    bg {
+      display: flex;
+    }
+  }
+</style>
